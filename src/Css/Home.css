@@ -1,0 +1,168 @@
+
+.home{
+    margin: auto;
+    height:fit-content;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* background-color: rgb(104, 192, 98); */
+}
+.card{
+    margin:15px;
+    height: 450px;
+    width: 320px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: aliceblue;
+    cursor: pointer;
+}
+.img{
+    width: 100%;
+    height: 60%;
+    /* background-color: #002f34; */
+}
+.img img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+.details{
+    margin: 0px;
+    width: 100%;
+    height: 40%;
+    padding-left: 15px;
+    font-family: sans-serif;
+    /* background-color: #35adba; */
+
+}
+h1{
+    margin: 0;
+    font-size: 18px;
+
+}
+
+button{
+    margin-left: 25%;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+button:hover{
+    transition: all 0.5s ease;
+    transform: scale(1.1);
+}
+
+
+a{
+    text-decoration: none;
+}
+
+
+
+
+.footer{
+    margin-top: 20px;
+    height: 200px;
+    width: 100%;
+    background-color: rgba(11, 59, 127, 0.256);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+table{
+    height: 90%;
+    width: 60%;
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    /* border: 1px solid black; */
+}
+thead{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #002f34;
+}
+tbody{
+    font-weight: 400;
+    color: #002f34b3;
+    font-size: 12px;
+}
+.flwus h3{
+    margin-top:0px ;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+.follow-div{
+    height: 90%;
+    /* background-color: #31e7ff; */
+    width: 200px;
+}
+.flwicon img{
+    height: 25px;
+    padding-left: 5px;
+}
+.playstore {
+    height: 80px;
+
+}
+.appstore{
+    margin-top: -20px;
+    height: 50px;
+}
+.endfooter{
+
+    height: 200px ;
+    width: 100%;
+    background-color: rgb(37, 37, 83);
+
+    display: flex;
+    align-items: center;
+    
+}
+.endftrsec1{
+    margin: auto;
+height: 80%;
+width: 100%;
+/* background-color: #f1ee26; */
+}
+.logs{
+    width: 80%;
+    height: 70%;
+    margin: auto;
+    /* background-color: #31e7ff; */
+    display: flex;
+    justify-content: space-between;
+
+}
+.logs img{
+height: 70px;
+}
+.ftrlogos{
+    height: 100%;
+    width: 200px;
+    /* border: 1px solid white; */
+    /* background-color: #3a3a3a; */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.end{
+    width: 80%;
+    height: 20%;
+    margin: auto;
+    /* background-color: #f1ee26; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-family: sans-serif;
+    font-size: 12px;
+
+}
