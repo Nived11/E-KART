@@ -10,7 +10,7 @@ const Nav = () => {
             <nav>
                 <div className="container">
                     <div className="logo">
-                        E-Kart
+                       ZyreX
                     </div>
                     <div className="search">
                         <input type="text" placeholder="Search Products"/>

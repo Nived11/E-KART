@@ -7,19 +7,19 @@ const Product = () => {
     const [product, setProduct] = useState(null); // Store a single product
 
     useEffect(() => {
-        // Fetch the specific product using the ID
+      
         fetch(`https://dummyjson.com/products/${id}`)
             .then((res) => res.json())
             .then((out) => setProduct(out))
             .catch((err) => console.error("Error fetching product:", err));
 
-        // Cleanup function (if needed)
+       
         return () => {
             console.log("Unmounting");
         };
     }, [id]);
 
-    // Handle loading state
+    // Handle loading page...
     if (!product) {
         return  <div className="loading-container">
         <div className="spinner"></div>
@@ -29,7 +29,7 @@ const Product = () => {
 
     return (
         <div className="productcontainer">
-            {/* Left Container */}
+           
             <div className="lftcontainer">
                 <div className="image">
                     <img src={product.images||product.thumbnail} alt={product.title} />
@@ -43,7 +43,7 @@ const Product = () => {
                 </div>
             </div>
 
-            {/* Right Container */}
+           
             <div className="rgtcontainer">
                 <h1>{product.title}</h1>
                 <h3>${product.price}</h3>
