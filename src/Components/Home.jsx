@@ -42,14 +42,14 @@ const Home = () => {
                             <td>POPULAR LOCATIONS</td>
                             <td>TRENDING LOCATIONS</td>
                             <td>ABOUT US</td>
-                            <td>E-Kart</td>
+                            <td>Zyrex</td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>Kolkata</td>
                             <td>Bhubaneshwar</td>
-                            <td>Tech@E-Kart</td>
+                            <td>Tech@Zyrex</td>
                             <td>Blog</td>
                         </tr>
                         <tr>
@@ -103,7 +103,7 @@ const Home = () => {
                     </div>
                     <div className="end">
                         <p>Help - Sitemap</p>
-                        <p>All rights reserved &copy; 2006-2025 E-Kart</p>
+                        <p>All rights reserved &copy; 2006-2025 Zyrex</p>
                     </div>
                 </div>
             </div>

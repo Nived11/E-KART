@@ -14,9 +14,10 @@
     height: 450px;
     width: 320px;
     border-radius: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.433);
+    border: 1px solid rgba(0, 0, 0, 0.055);
     background-color: rgb(255, 255, 255);
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.23) 0px 1px 4px;
 }
 .img{
     width: 100%;
@@ -35,15 +36,11 @@
     font-family: sans-serif;
     /* background-color: #35adba; */
     color: #360948;
-
-
 }
 h1{
     margin: 0;
     font-size: 18px;
-
 }
-
 button{
     margin-left: 25%;
     height: 30px;
@@ -58,15 +55,9 @@ button:hover{
     transition: all 0.5s ease;
     transform: scale(1.1);
 }
-
-
 a{
     text-decoration: none;
 }
-
-
-
-
 .footer{
     margin-top: 20px;
     height: 200px;
@@ -118,21 +109,17 @@ tbody{
     height: 50px;
 }
 .endfooter{
-
     height: 200px ;
     width: 100%;
     background-color: rgb(60, 2, 83);
-
-
     display: flex;
     align-items: center;
-    
 }
 .endftrsec1{
     margin: auto;
-height: 80%;
-width: 100%;
-/* background-color: #f1ee26; */
+    height: 80%;
+    width: 100%;
+    /* background-color: #f1ee26; */
 }
 .logs{
     width: 80%;
@@ -141,10 +128,9 @@ width: 100%;
     /* background-color: #31e7ff; */
     display: flex;
     justify-content: space-between;
-
 }
 .logs img{
-height: 70px;
+    height: 70px;
 }
 .ftrlogos{
     height: 100%;
@@ -166,5 +152,4 @@ height: 70px;
     color: white;
     font-family: sans-serif;
     font-size: 12px;
-
 }

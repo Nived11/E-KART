@@ -5,10 +5,7 @@ import "../Css/Cart.css";
 const Cart = ({ cartItems, removeFromCart, handleQuantityChange, setCartItems }) => {
   const navigate = useNavigate(); // For navigation
   // Calculate total amount
-  const totalAmount = cartItems.reduce(
-    (total, item) => total + item.price * item.quantity,
-    0
-  );
+  const totalAmount = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
   // Handle place order
   const handlePlaceOrder = () => {
@@ -21,7 +18,7 @@ const Cart = ({ cartItems, removeFromCart, handleQuantityChange, setCartItems })
 
   return (
     <div className="cart-page">
-      <h1 className="head">Your Cart</h1>
+      <h1 className="head">{cartItems.length===0 ? "" : "Your Cart"}</h1>
       <div className="cart-container">
         <div className="cart-lft">
           {cartItems.length > 0 ? (
@@ -38,13 +35,8 @@ const Cart = ({ cartItems, removeFromCart, handleQuantityChange, setCartItems })
                     <p>Details</p>
                     <div className="quantity-and-remove">
                       <span>Qty</span>
-                      <select
-                        className="qtyval"
-                        value={item.quantity}
-                        onChange={(e) =>
-                          handleQuantityChange(item.id, e.target.value)
-                        }
-                      >
+                      <select className="qtyval" value={item.quantity} onChange={(e) =>
+                          handleQuantityChange(item.id, e.target.value)}>
                         {[...Array(10)].map((_, index) => (
                           <option key={index} value={index + 1}>
                             {index + 1}
@@ -60,7 +52,13 @@ const Cart = ({ cartItems, removeFromCart, handleQuantityChange, setCartItems })
               </div>
             ))
           ) : (
-            <p>Your cart is empty.</p>
+            <div className="cart-empty-container">
+              <div className="cart-empty-icon">🛒</div>
+              <p className="cart-empty-message">Oops! Your cart is empty.</p>
+              <p>But don't worry, we have plenty of exciting items waiting for you!</p>
+              <div className="cart-empty-button" onClick={() => navigate('/')}>Start Shopping</div>
+          </div>
+
           )}
         </div>
 
