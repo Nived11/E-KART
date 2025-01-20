@@ -1,0 +1,208 @@
+/* order.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f7fa;
+  }
+  
+  /* Full-page layout */
+  .order-success {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: linear-gradient(135deg, #f7c7d9, #a2c2e7); /* Gradient background */
+  animation: bgAnimation 4s infinite ease-in-out;/* Gradient background */
+    overflow: hidden;
+  }
+  
+  /* Truck and boxes container */
+  .truck-animation-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 50px;
+  }
+  
+  /* Truck image */
+  .truck {
+    position: absolute;
+    bottom: 0;
+    left: 100%; /* Start from the far right */
+    animation: truckMove 5s ease-in-out infinite;
+  }
+  
+  .truck img {
+    width: 150px;
+    height: auto;
+  }
+  
+  /* Order boxes */
+  .order-boxes {
+    position: absolute;
+    bottom: 20px;
+    left: -300px;
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    animation: boxesMove 5s ease-in-out infinite;
+  }
+  
+  .box {
+    width: 50px;
+    height: 50px;
+    background-color: #ffeb3b;
+    border-radius: 5px;
+    margin-right: 5px;
+    animation: boxAppear 2s ease-in-out forwards;
+  }
+  
+  .box:nth-child(1) {
+    animation-delay: 0.5s;
+  }
+  
+  .box:nth-child(2) {
+    animation-delay: 1s;
+  }
+  
+  .box:nth-child(3) {
+    animation-delay: 1.5s;
+  }
+  
+  /* Title animation */
+  .order-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    animation: fadeInBounce 2s ease-out;
+    animation-delay: 0.2s;
+  }
+  
+  /* Message animation */
+  .order-message {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeIn 2s ease-out 0.5s forwards, pulse 1.5s infinite; /* Adding pulse animation */
+  }
+  
+  /* Button animation */
+  .go-home-link {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: bounceIn 1s ease-in-out infinite; /* Bouncing effect for button */
+  }
+  
+  .go-home-link:hover {
+    background-color: #218838;
+    transform: scale(1.1); /* Slightly grow on hover */
+  }
+  
+  /* Keyframe animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInBounce {
+    0% {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    60% {
+      transform: translateY(10px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    60% {
+      transform: translateY(-10px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes truckMove {
+    0% {
+      left: 100%; /* Start from the far right */
+    }
+    50% {
+      left: 50%; /* Move to the middle of the container */
+      transform: translateX(-50%); /* Center the truck */
+    }
+    100% {
+      left: -150px; /* End at the far left */
+    }
+  }
+  
+  @keyframes boxesMove {
+    0% {
+      left: -300px;
+    }
+    50% {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
+  @keyframes boxAppear {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes bgAnimation {
+    0% {
+      background: linear-gradient(135deg, #f7c7d9, #a2c2e7);
+    }
+    50% {
+      background: linear-gradient(135deg, #a2c2e7, #f7c7d9);
+    }
+    100% {
+      background: linear-gradient(135deg, #f7c7d9, #a2c2e7);
+    }
+  }

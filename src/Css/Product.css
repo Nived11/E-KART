@@ -119,7 +119,9 @@
     animation: spin 1s linear infinite;
     margin-bottom: 20px;
 }
-
+.goToCart{
+    color: rgb(255, 106, 0);
+}
 /* Spinner keyframes */
 @keyframes spin {
     0% {

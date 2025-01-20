@@ -1,66 +1,88 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "../Css/Cart.css";
 
-const Cart = () => {
+const Cart = ({ cartItems, removeFromCart, handleQuantityChange, setCartItems }) => {
+  const navigate = useNavigate(); // For navigation
+  // Calculate total amount
+  const totalAmount = cartItems.reduce(
+    (total, item) => total + item.price * item.quantity,
+    0
+  );
+
+  // Handle place order
+  const handlePlaceOrder = () => {
+    // Clear cart data from localStorage and state
+    localStorage.removeItem("cartItems");
+    setCartItems([]); // Clear the cart state
+    // Navigate to the order success page
+    navigate("/order");
+  };
+
   return (
     <div className="cart-page">
-      <h1 className="head">Your  Cart</h1>
-     <div className="cart-container">
+      <h1 className="head">Your Cart</h1>
+      <div className="cart-container">
         <div className="cart-lft">
-            <div className="cart-card">
+          {cartItems.length > 0 ? (
+            cartItems.map((item) => (
+              <div key={item.id} className="cart-card">
                 <div className="cart-img">
-                    <img src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png" alt="" />
+                  <img src={item.thumbnail} alt={item.title} />
                 </div>
                 <div className="cart-details">
-                   <div className="cart-det"> 
-                        <h1>Product Name</h1>
-                        <h3>$1888</h3>
-                        <p>Seller</p>
-                        <p>details </p>
-                        <p>Qty  
-                            <select className="qtyval" name="" id=""> 
-                                <option value="">1</option>
-                                <option value="">2</option>
-                                <option value="">3</option>
-                                <option value="">4</option>
-                                <option value="">5</option>
-                                <option value="">6</option>
-                                <option value="">7</option>
-                                <option value="">8</option>
-                                <option value="">9</option>
-                                <option value="">10</option>
-                            </select>
-                            <div className="remove"><p>Remove</p></div>
-                        </p>
+                  <div className="cart-det">
+                    <h1>{item.title}</h1>
+                    <h3>${item.price}</h3>
+                    <p>Seller</p>
+                    <p>Details</p>
+                    <div className="quantity-and-remove">
+                      <span>Qty</span>
+                      <select
+                        className="qtyval"
+                        value={item.quantity}
+                        onChange={(e) =>
+                          handleQuantityChange(item.id, e.target.value)
+                        }
+                      >
+                        {[...Array(10)].map((_, index) => (
+                          <option key={index} value={index + 1}>
+                            {index + 1}
+                          </option>
+                        ))}
+                      </select>
+                      <div className="remove" onClick={() => removeFromCart(item.id)}>
+                        <span>Remove</span>
+                      </div>
                     </div>
+                  </div>
                 </div>
-            </div>
-
-            
-
+              </div>
+            ))
+          ) : (
+            <p>Your cart is empty.</p>
+          )}
         </div>
-            <div className="cart-rgt">
 
-                                <div className="billing-slip">
-                        <h1 className="title">Billing Slip</h1>
-                        <div className="content">
-                            <div className="product-details">
-                            <p><strong>Discount Amount:</strong> $50.00</p>
-                            <p><strong>Total Amount:</strong> $450.00</p>
-                            </div>
-                            <div className="offers">
-                            <h3>Other Offers:</h3>
-                            <ul>
-                                <li>Free shipping on orders over $100</li>
-                                <li>10% off on next purchase</li>
-                            </ul>
-                            </div>
-                            <div className="place-order"><p>Place Order</p></div>
-                        </div>
-                        </div>
+        {/* Show billing section only if cartItems is not empty */}
+        {cartItems.length > 0 && (
+          <div className="cart-rgt">
+            <div className="billing-slip">
+              <h1 className="title">Billing Slip</h1>
+              <div className="content">
+                <div className="product-details">
+                  <p>
+                    <strong>Total Amount:</strong> ${totalAmount.toFixed(2)}
+                  </p>
+                </div>
+                <div className="place-order" onClick={handlePlaceOrder}>
+                  <p>Place Order</p>
+                </div>
+              </div>
             </div>
-
-     </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
