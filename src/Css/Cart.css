@@ -1,0 +1,209 @@
+/* General Styles */
+.cart-page {
+    padding: 20px;
+    font-family: "Arial", sans-serif;
+    /* background-color: #f5f5f5; */
+    
+   
+  }
+  
+ .head {
+    position: sticky;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #444;
+  }
+  
+.cart-container{
+    display: flex;
+    height: 100vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    margin-left: 20px;
+}
+.cart-lft{
+    height: 100%;
+    width: 50%;
+    /* padding-right: 20px; */
+    /* background-color: bisque; */
+}
+.cart-card{
+    height: fit-content;
+    width: 100%;
+    background-color: rgba(238, 238, 238, 0.759);
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.cart-img{
+    height: 160px;
+    width: 22%;
+    margin-left: 10px;
+   
+}
+.cart-img img{
+    height: 100%;
+    width: 100%;
+}
+.cart-details{
+    height: 100%;
+    width: 75%;
+    margin-left: 20px;
+    /* border: 1px solid black; */
+}
+.cart-details h1{
+    padding-top: 20px;
+
+}
+.qty{
+    height: 20px;
+    width: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.219);
+}
+
+.qtyval{
+    height: 20px;
+    width: 50px;
+    margin-left: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+.placeorder{
+    margin-top: 10px;
+    height: 50px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.remove{
+    margin-top: 20px;
+    height: 40px;
+    width: 120px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    background-color: rgb(211, 35, 35);
+    cursor: pointer;
+
+}
+.order{
+    height: 40px;
+    width: 120px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    background-color: rgb(22, 103, 13);
+    cursor: pointer;
+}
+.cart-rgt{
+    /* height: fit-content; */
+    width: 50%;
+    position: sticky;
+    top: 20px;
+    /* background-color: rgb(88, 59, 24); */
+}
+
+
+.billing-slip {
+    position: sticky;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    max-width: 450px;
+    margin: -10px auto;
+    padding: 50px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    /* background: linear-gradient(145deg, #f0f7ff, #e0efff); */
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  .content {
+    font-size: 18px;
+    color: #34495e;
+  }
+  
+  .product-details p {
+    margin-bottom: 15px;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #ecf0f1;
+    color: #057004;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  .product-details strong {
+    color: #2d2e2e;
+  }
+  
+  .offers {
+    /* margin-top: 25px; */
+    font-size: 16px;
+  }
+  
+  .offers h3 {
+    font-size: 22px;
+    color: #e74c3c;
+    margin-bottom: 10px;
+  }
+  
+  .offers ul {
+    list-style-type: none;
+    padding-left: 0px;
+  }
+  
+  .offers li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    background: #f1c40f;
+    padding: 10px;
+    border-radius: 5px;
+    color: #2c3e50;
+  }
+  
+  .offers li:last-child {
+    margin-bottom: 0;
+  }
+  
+  .place-order {
+    height: 50px;
+    width: 100%;
+    /* padding: 12px; */
+    background-color: #cd6c17;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .place-order:hover {
+    background-color: #903a12;
+  }
+  

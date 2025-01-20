@@ -17,13 +17,12 @@ const Nav = () => {
                     </div>
                     <ul>
                         <Link to={"/"}>Home </Link>
-                        <li>Product</li>
+                        <Link to={"/"}>Product </Link>
                         <li>About</li>
                         <li>Contact</li>
                     </ul>
                     <div className="cart">
-                        <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="" />
-                         Cart
+                       <Link to="/cart"><img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="cart" /> </Link> 
                     </div>
                 </div>
             </nav>

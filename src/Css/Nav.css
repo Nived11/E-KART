@@ -6,7 +6,7 @@ body {
 nav {
     height: 80px;
     width: 100%;
-    background-color: rgb(60, 2, 83);
+    background-color: rgb(42, 2, 64);
 
     /* background-image: linear-gradient(to bottom, #411560, #532b6f, #64417e, #76568d, #886c9c); */
     display: flex;
