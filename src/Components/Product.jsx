@@ -3,20 +3,18 @@ import { useParams, useNavigate } from "react-router-dom";
 import "../Css/Product.css";
 
 const Product = ({ addToCart }) => {
-  const { id } = useParams(); // Extract product ID from the URL
-  const [product, setProduct] = useState(null); // Store a single product
-  const [isAddedToCart, setIsAddedToCart] = useState(false); // Track if product is added to the cart
-  const navigate = useNavigate(); // For navigation to Cart page
+  const { id } = useParams(); 
+  const [product, setProduct] = useState(null); 
+  const [isAddedToCart, setIsAddedToCart] = useState(false); 
+  const navigate = useNavigate(); 
 
-  // Fetch product data from API
   useEffect(() => {
     fetch(`https://dummyjson.com/products/${id}`)
       .then((res) => res.json())
       .then((out) => setProduct(out))
-      .catch((err) => console.error("Error fetching product:", err));
+      .catch((error) => console.error("Error fetching product:", error));
   }, [id]);
 
-  // Handle loading page...
   if (!product) {
     return (
       <div className="loading-container">
@@ -26,21 +24,18 @@ const Product = ({ addToCart }) => {
     );
   }
 
-  // Handle Add to Cart action
   const handleAddToCart = () => {
-    addToCart(product); // Add product to cart
-    setIsAddedToCart(true); // Mark the product as added to cart
+    addToCart(product); 
+    setIsAddedToCart(true); 
   };
 
-  // Handle navigating to Cart page
   const handleGoToCart = () => {
-    navigate("/cart"); // Navigate to the Cart page
+    navigate("/cart"); 
   };
 
-  // Handle Buy Now action
   const handleBuyNow = () => {
-    addToCart(product); // Add product to cart
-    navigate("/cart"); // Navigate to the Cart page to initiate checkout
+    addToCart(product); 
+    navigate("/cart"); 
   };
 
   return (

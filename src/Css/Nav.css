@@ -9,7 +9,7 @@ nav {
     position: sticky; 
     top: 0; 
     z-index: 1000; 
-    background: linear-gradient(270deg, #000000, #2f1a67, #31056f, #2f1a67, #000000);
+    background: linear-gradient(270deg, #000000, #2f1a67, #4b0ba5, #2f1a67, #000000);
     background-size: 400% 400%;
     display: flex;
     align-items: center;

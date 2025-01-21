@@ -3,16 +3,12 @@ import { useNavigate } from "react-router-dom";
 import "../Css/Cart.css";
 
 const Cart = ({ cartItems, removeFromCart, handleQuantityChange, setCartItems }) => {
-  const navigate = useNavigate(); // For navigation
-  // Calculate total amount
+  const navigate = useNavigate(); 
   const totalAmount = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
-  // Handle place order
   const handlePlaceOrder = () => {
-    // Clear cart data from localStorage and state
     localStorage.removeItem("cartItems");
-    setCartItems([]); // Clear the cart state
-    // Navigate to the order success page
+    setCartItems([]); 
     navigate("/order");
   };
 
@@ -58,11 +54,9 @@ const Cart = ({ cartItems, removeFromCart, handleQuantityChange, setCartItems })
               <p>But don't worry, we have plenty of exciting items waiting for you!</p>
               <div className="cart-empty-button" onClick={() => navigate('/')}>Start Shopping</div>
           </div>
-
           )}
         </div>
 
-        {/* Show billing section only if cartItems is not empty */}
         {cartItems.length > 0 && (
           <div className="cart-rgt">
             <div className="billing-slip">
