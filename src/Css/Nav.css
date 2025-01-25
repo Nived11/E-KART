@@ -169,3 +169,28 @@ nav a{
     transition: all 0.5s ease;
     transform: scale(1.2 );
 }
+
+select{
+    height: 30px;
+    width: 120px;
+    border: none;
+    outline: none;
+    /* padding-left: 10px; */
+    cursor: pointer;
+    background-color: #c72525;
+    background:none;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aliceblue;
+}
+option{
+    height: 100px;
+    background-color: #270f4c;
+    color: white;
+    border: 1px solid rgb(191, 29, 29);
+}
+option:hover{
+    background-color: #270f4c;
+    color: white;
+    border: 1px solid rgb(191, 29, 29);
+}
